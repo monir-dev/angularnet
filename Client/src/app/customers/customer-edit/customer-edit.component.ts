@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { AlertifyService } from '../_services/alertify.service';
+import { AlertifyService } from '../../_services/alertify.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-update',
-  templateUrl: './update.component.html',
-  styleUrls: ['./update.component.css']
+selector: 'customer-edit-component',
+templateUrl: './customer-edit.component.html',
+styleUrls: ['./customer-edit.component.css']
 })
-export class UpdateComponent implements OnInit {
+export class CustomerEditComponent implements OnInit {
+
   syllabusUploaderName = "Upload Syllabus";
   testPlanUploaderName = "Upload Test Plan";
 
@@ -74,4 +75,3 @@ export class UpdateComponent implements OnInit {
     this.item = {};
   }
 }
-

@@ -12,36 +12,34 @@ import { postReducer } from './_reducers/post.reducer';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import { CreateComponent } from './create/create.component';
 import { UploadComponent } from './upload/upload.component';
+import { CustomersModule } from './customers/customer.module';
 
 import { DataService } from './_services/data.service';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { AlertifyService } from './_services/alertify.service';
-import { UpdateComponent } from './update/update.component';
 import { from } from 'rxjs';
 
 
+import { AppRoutingModule } from "./app-routing.module";
+
 import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+
+
 
 @NgModule({
    declarations: [
       AppComponent,
       NavComponent,
       HomeComponent,
-      CreateComponent,
-      UpdateComponent,
       UploadComponent
    ],
    imports: [
       BrowserModule,
       FormsModule,
       HttpClientModule,
-      RouterModule.forRoot([
-        { path: '', component: HomeComponent },
-        { path: 'create', component: CreateComponent },
-        { path: 'edit/:id', component: UpdateComponent },
-      ]),
+      AppRoutingModule,
+      CustomersModule,
       StoreModule.forRoot({
         post: postReducer,
         message: SimpleReducer

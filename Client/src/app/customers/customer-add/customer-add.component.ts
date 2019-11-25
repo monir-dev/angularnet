@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { AlertifyService } from '../_services/alertify.service';
+import { AlertifyService } from '../../_services/alertify.service';
+
+
 
 @Component({
-  selector: 'app-create',
-  templateUrl: './create.component.html',
-  styleUrls: ['./create.component.css']
+  selector: 'customer-add-component',
+  templateUrl: './customer-add.component.html',
+  styleUrls: ['./customer-add.component.css']
 })
-export class CreateComponent implements OnInit {
+export class CustomerAddComponent implements OnInit {
   syllabusUploaderName = "Upload Syllabus";
   testPlanUploaderName = "Upload Test Plan";
 
